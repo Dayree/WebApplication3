@@ -41,7 +41,7 @@ namespace WebApplication3.DB
             };
             foreach (Siparis c in siparisler)
             {
-                context.Siparisler.Add(c);
+                context.Siparises.Add(c);
             }
             context.SaveChanges();
         }

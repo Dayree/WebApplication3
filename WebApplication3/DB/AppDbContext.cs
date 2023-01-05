@@ -13,7 +13,7 @@ namespace WebApplication3.DB
 
         }
         public DbSet<User> Users { get; set; }
-        public DbSet<Siparis> Siparisler { get; set; }
+        public DbSet<Siparis> Siparises { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
