@@ -12,7 +12,7 @@ namespace WebApplication3.DB
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         public string KullaniciAdi { get; set; }
-        public int Sifre { get; set; }
+        public string Sifre { get; set; }
         public string Email { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
