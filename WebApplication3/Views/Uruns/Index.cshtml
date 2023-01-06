@@ -1,54 +1,186 @@
 ﻿@model IEnumerable<WebApplication3.DB.Urun>
 
-@{
-    ViewData["Title"] = "Index";
-}
+    @{
+        ViewData["Title"] = "Index";
+    }
 
-<h1>Index</h1>
+    <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.UrunAdi)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Renk)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Model)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fiyat)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.UrunAdi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Renk)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Model)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fiyat)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.UrunAdi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Renk)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Model)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fiyat)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UrunAdi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Renk)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Model)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Fiyat)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <!DOCTYPE html>
+    <html lang="en">
 
+    <head>
+        <title>TWOB</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="text-center">
+            <span>
+                <p><strong>DISCOVER NOW!</strong></p>
+            </span>
+        </div>
+        <style>
+            header {
+                background-color: rgb(40, 87, 169);
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color: rgb(255, 255, 255);
+            }
+        </style>
+        <header>
+            <h2>TWOB</h2>
+        </header>
+        <br>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+
+
+  
+        <div class="text-center">
+            <span>
+                <p><strong>ALL PRODUCTS</strong></p>
+            </span>
+            <br>
+        </div>
+        <div class=" text-align">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../img/twob-white.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">TWOB-WHITE</h5>
+                            <p class="card-text">OUR SPECIAL COLLECTION-ITEMS</p>
+                            <a href="twob-white.html" class="btn btn-primary">VIEW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../img/twoa-green.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">TWOA-GREEN</h5>
+                            <p class="card-text">OUR SPECIAL COLLECTION-ITEMS</p>
+                            <a href="twoa-green.html" class="btn btn-primary">VIEW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../img/twob-green.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">TWOB-GREEN</h5>
+                            <p class="card-text">OUR SPECIAL COLLECTION-ITEMS</p>
+                            <a href="twob-green.html" class="btn btn-primary">VIEW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../img/twob-blue.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">TWOB-BLUE</h5>
+                            <p class="card-text">OUR SPECIAL COLLECTION-ITEMS</p>
+                            <a href="twob-blue.html" class="btn btn-primary">VIEW</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../img/twoa-brown.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">TWOA-BROWN</h5>
+                            <p class="card-text">OUR SPECIAL COLLECTION-ITEMS</p>
+                            <a href="twoa-brown.html" class="btn btn-primary">VIEW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../img/twob-pink.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">TWOB-PINK</h5>
+                            <p class="card-text">OUR SPECIAL COLLECTION-ITEMS</p>
+                            <a href="twob-pink.html" class="btn btn-primary">VIEW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <br>
+    <br>
+
+</html>
