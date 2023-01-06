@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using WebApplication3.DB;
 
 namespace WebApplication3.DB
 {
@@ -20,5 +21,7 @@ namespace WebApplication3.DB
             modelBuilder.Entity<User>().ToTable("User");
             modelBuilder.Entity<Siparis>().ToTable("Siparis");
         }
+
+        public DbSet<WebApplication3.DB.Urun> Urun { get; set; }
     }
 }
